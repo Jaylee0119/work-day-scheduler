@@ -20,7 +20,7 @@ $(document).ready(function () {
 
         // loop over time blocks
         $(".time-block").each(function () {
-            var blockTime = parseInt($(this).attr("id").split("hour")[1]);
+            var blockTime = parseInt($(this).attr("id").split("hour_")[1]);
 
             // To check the time and add the classes for background indicators
             if (blockTime < timeNow) {
@@ -42,5 +42,17 @@ $(document).ready(function () {
         })
     }
 
-   
+    // get saved scheduled work from local storage
+    $("#hour_1 .description").val(localStorage.getItem("hour_1"));
+    $("#hour_2 .description").val(localStorage.getItem("hour_2"));
+    $("#hour_3 .description").val(localStorage.getItem("hour_3"));
+    $("#hour_4 .description").val(localStorage.getItem("hour_4"));
+    $("#hour_5 .description").val(localStorage.getItem("hour_5"));
+    $("#hour_6 .description").val(localStorage.getItem("hour_6"));
+    $("#hour_7 .description").val(localStorage.getItem("hour_7"));
+    $("#hour_8 .description").val(localStorage.getItem("hour_8"));
+    $("#hour_9 .description").val(localStorage.getItem("hour_9"));
+    $("#hour_10 .description").val(localStorage.getItem("hour_10"));
+
+    timeTracker();
 })

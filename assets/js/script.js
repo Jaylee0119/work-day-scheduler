@@ -20,7 +20,7 @@ $(document).ready(function () {
 
         // loop over time blocks
         $(".time-block").each(function () {
-            var blockTime = parseInt($(this).attr("id").split("hour_")[1]);
+            var blockTime = parseInt($(this).attr("id").split("hour_")[1])+7; //+7 adds 7 to our id defined hour which starts at 1
 
             // To check the time and add the classes for background indicators
             if (blockTime < timeNow) {
